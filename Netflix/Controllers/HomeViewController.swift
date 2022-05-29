@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["Trending movies", "Popular", "Trending Tv", "Top Rated", "Upcoming Movies"]
+    let sectionTitles: [String] = ["Trending movies", "Trending Tv", "Popular", "Top Rated", "Upcoming Movies"]
     
     private let homeFeedTable: UITableView = {
        
@@ -37,6 +37,8 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         getTrendingMovies()
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,6 +63,58 @@ class HomeViewController: UIViewController {
     
     private func getTrendingMovies() {
         APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getTrendingTvs() {
+        APICaller.shared.getTrendingTvs { results in
+            switch results {
+            case .success(let tvs):
+                print(tvs)
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getPopularMovies() {
+        APICaller.shared.getPopularMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getUpcomingMovies() {
+        APICaller.shared.getUpcomingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func getTopRatedMovies() {
+        APICaller.shared.getTopRatedMovies { results in
             switch results {
             case .success(let movies):
                 print(movies)
@@ -110,7 +164,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.capitalized
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

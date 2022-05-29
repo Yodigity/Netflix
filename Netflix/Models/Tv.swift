@@ -1,5 +1,5 @@
 //
-//  Movie.swift
+//  Tv.swift
 //  Netflix
 //
 //  Created by Aaron Gokani on 29/05/2022.
@@ -8,11 +8,11 @@
 import Foundation
 
 
-struct MoviesResponse: Codable {
-    let results: [Movie]
+struct TvResponse: Codable {
+    let results: [Tv]
 }
 
-struct Movie: Codable {
+struct Tv: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
