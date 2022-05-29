@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD1061512843B6CD00A4EB87 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1061502843B6CD00A4EB87 /* APICaller.swift */; };
 		CD1061532843B70200A4EB87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1061522843B70200A4EB87 /* Utils.swift */; };
+		CD1061552843BBA800A4EB87 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1061542843BBA800A4EB87 /* Movie.swift */; };
 		CD8B1A9D283F93D5001D1DF1 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B1A9C283F93D5001D1DF1 /* CollectionViewTableViewCell.swift */; };
 		CD8B1A9F2840F9D9001D1DF1 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8B1A9E2840F9D9001D1DF1 /* HeroHeaderUIView.swift */; };
 		CDD5A1DA283D4C8D00CADB0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5A1D9283D4C8D00CADB0D /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		CD1061502843B6CD00A4EB87 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		CD1061522843B70200A4EB87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CD1061542843BBA800A4EB87 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CD8B1A9C283F93D5001D1DF1 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		CD8B1A9E2840F9D9001D1DF1 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		CDD5A1D6283D4C8D00CADB0D /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 		CD8B1A98283F936C001D1DF1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CD1061542843BBA800A4EB87 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				CDD5A1F3283D4E2600CADB0D /* SearchViewController.swift in Sources */,
 				CDD5A1DE283D4C8D00CADB0D /* MainTabBarViewController.swift in Sources */,
+				CD1061552843BBA800A4EB87 /* Movie.swift in Sources */,
 				CD8B1A9D283F93D5001D1DF1 /* CollectionViewTableViewCell.swift in Sources */,
 				CD1061512843B6CD00A4EB87 /* APICaller.swift in Sources */,
 				CD8B1A9F2840F9D9001D1DF1 /* HeroHeaderUIView.swift in Sources */,
