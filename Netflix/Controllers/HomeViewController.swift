@@ -71,6 +71,8 @@ class HomeViewController: UIViewController {
     
     
     
+    
+    
     private func getTrendingMovies() {
         APICaller.shared.getTrendingMovies { results in
             switch results {
