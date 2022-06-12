@@ -15,7 +15,8 @@ static let identifier = "TitleTableViewCell"
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-
+        imageView.clipsToBounds = true
+    
         
         return imageView
     }()
@@ -23,6 +24,7 @@ static let identifier = "TitleTableViewCell"
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.lineBreakMode = .byTruncatingTail
         return label
     }()
     
@@ -52,14 +54,15 @@ static let identifier = "TitleTableViewCell"
     private func applyConstraints() {
         let titlePosterUIImageViewConstraints = [
             titlePosterUIImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titlePosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
+            titlePosterUIImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             titlePosterUIImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
             titlePosterUIImageView.widthAnchor.constraint(equalToConstant: 100)
         ]
         
         let titleLabelConstraints = [
             titleLabel.leadingAnchor.constraint(equalTo: titlePosterUIImageView.trailingAnchor, constant: 10),
-            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            titleLabel.widthAnchor.constraint(equalToConstant: 190)
         ]
         
         let playTitleButtonConstraint = [

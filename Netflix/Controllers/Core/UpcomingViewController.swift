@@ -18,11 +18,11 @@ class UpcomingViewController: UIViewController {
         
         return table
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    title = "Upcoming"
+        
+        title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         view.backgroundColor = .systemBackground
@@ -40,7 +40,7 @@ class UpcomingViewController: UIViewController {
         super.viewDidLayoutSubviews()
         upcomingTable.frame = view.bounds
     }
-
+    
     
     private func fetchUpcoming(){
         APICaller.shared.getUpcomingMovies { [weak self] result in
@@ -50,13 +50,13 @@ class UpcomingViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.upcomingTable.reloadData()
                 }
-               
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
-
+    
 }
 
 extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
